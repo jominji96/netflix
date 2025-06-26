@@ -1,0 +1,45 @@
+.loginPage{
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  font-size: $font-medium;
+  @include flex-layout();
+  .loginWrap{
+    width: 500px;
+    padding: 2rem 3rem;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.7);
+    *{
+      display: block;
+      margin: 1rem 0;
+    }
+    label:nth-of-type(1),
+    label:nth-of-type(2){
+      @include label();
+    }
+    .error{
+      color: $main-color;
+    }
+    button:nth-of-type(1){
+      @include btn-style();
+      width: 100%;
+    }
+    button:nth-of-type(2){
+      @include btn-style(#666);
+      width: 100%;
+    }
+    a{
+      text-align: center;
+      text-decoration: underline;
+    }
+    label:nth-of-type(3){
+      display: flex;
+      gap: 10px;
+    }
+    .sign{
+      strong{
+        display: inline-block;
+      }
+    }
+  }
+}
